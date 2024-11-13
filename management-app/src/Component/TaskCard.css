@@ -1,0 +1,241 @@
+.task-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+    overflow: hidden;
+    position: relative; /* Ensures checklist items don't overflow */
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-priority {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .priority-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  /* Priority Colors */
+  .high-priority {
+    background-color: #e74c3c; /* Red for High Priority */
+  }
+  
+  .medium-priority {
+    background-color: #18B0FF; /* Orange for Medium Priority */
+  }
+  
+  .low-priority {
+    background-color: #68B984; /* Green for Low Priority */
+  }
+  
+  /* Rest of your existing styles */
+  
+  
+  .priority-label {
+    color: #666;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  
+  .menu-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 05px;
+    height: 20px;
+
+  }
+  .menu-btn:hover{
+    background-color: #f0f0f0; /* Change color on hover */
+  }
+  
+  .menu-dots {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .menu-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #666;
+  }
+  
+  .task-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 200px; /* Adjust width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  .task-title:hover::after {
+    content: attr(title); /* Pull the title attribute for display */
+    position: absolute;
+    bottom: 100%; /* Position above the title */
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+}
+.task-title::after {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+
+  
+  .task-checklist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .checklist-text {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .expand-btn {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .expand-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+  
+  .due-date {
+    font-size: 12px;
+  color: #666;
+
+  background: #DBDBDB;
+  display: inline-block;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 14px;
+  padding-top: 5px;
+    margin-right: auto;
+    padding-bottom: 5px;
+  }
+.task-status{
+
+    font-size: 12px;
+    color: #666;
+    background: #DBDBDB;
+    display: inline-block;
+    padding-left: 10px;
+    border-radius: 8px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+
+}
+.expand-btn svg {
+    transition: transform 0.3s ease; /* Smooth transition for the arrow */
+  }
+  
+  .expand-btn svg.expanded {
+    transform: rotate(0deg); /* Rotate arrow when expanded */
+  }
+  .checklist-items.expanded {
+    max-height: 200px; /* Adjust based on expected content */
+    opacity: 1;
+  }
+  
+  
+  /* TaskCard.css */
+  .checklist-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* Space above checklist items */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .checklist-item input {
+    margin-right: 10px; /* Space between checkbox and text */
+  }
+
+.status{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+   
+}
+.status span{
+    cursor: pointer;
+}
+.menu-options {
+    position: absolute;
+    top: 40px; /* Adjust based on where the 3-dot button is */
+    right: 20px; /* Align with the 3-dot button */
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Ensures it’s above other elements */
+    width: 120px;
+    padding: 5px;
+  }
+  .delete{
+    color: red;
+  }
+  
+  .menu-option {
+    padding: 10px; /* Space inside each menu item */
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .menu-option:hover {
+    background-color: #f0f0f0; /* Change color on hover */
+  }
+  .task-creator{
+    width: 25px;
+    height: 25px;
+    background-color: #FFEBEB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #333;
+    margin-right: 10px;
+    
+  }

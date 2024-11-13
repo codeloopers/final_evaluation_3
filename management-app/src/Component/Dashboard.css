@@ -1,0 +1,366 @@
+/* Dashboard.css */
+
+.dashboard {
+    display: flex;
+    height: 100vh; 
+   
+}
+
+.sidebar {
+    width: 250px; /* Fixed sidebar width */
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #EDF5FE;
+}
+.collaspe-icon-btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.collapse-all{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Updated nav-item to align icons and text perfectly */
+.nav-item {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally align the content */
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: #4391ED1A;
+    color: black;
+}
+
+/* Ensure the icons have a fixed size and spacing */
+.nav-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px; /* Adds uniform space between icon and text */
+    display: block;
+}
+
+/* Ensure that the text is aligned and doesn't shift */
+.nav-item span {
+    flex-grow: 1; /* Make the text take the remaining space */
+    display: inline-block;
+}
+
+/* Logout button styling */
+.logout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logout img {
+    margin-right: 10px;
+}
+
+/* Update main-content to take up fixed height */
+.main-content {
+    flex: 1; /* Allow the main content area to fill the available space */
+    padding: 20px;
+    overflow-y: hidden; /* Prevent scrolling on the main content area */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    color: #6b7280;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between; /* This aligns the content to the left and the dropdown to the right */
+    align-items: center; /* Vertically centers the content */
+}
+
+.add-people {
+    font-size: 10px;
+    color: #707070;
+    cursor: pointer;
+    margin-left: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.left-content {
+    display: flex;
+    align-items: center; /* Vertically center the left content */
+}
+.add-person-icon {
+    height: 10px;
+    margin-left: 15px;
+}
+
+/* Update for board-columns to allow for fixed width and horizontal scrolling */
+/* Ensure board columns maintain horizontal scroll but don't show vertical scroll */
+.board-columns {
+    display: flex;
+    gap: 20px;
+    height: calc(99vh - 160px);
+    padding-bottom: 10px; /* Provide some space for the scrollbar */
+    overflow-y: hidden; /* Hide vertical scroll for board */
+    overflow-x: auto; /* Maintain horizontal scroll for board */
+}
+
+/* Adjust column styles */
+.column {
+    flex: 0 0 350px;
+    background-color: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Ensure the task cards allow for a defined height */
+.task {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection during drag */
+    transition: background-color 0.2s ease;
+    min-height: 50px; /* Adjust as necessary */
+}
+
+/* Ensuring that the overall structure allows for increased width */
+.column img {
+    height: 20px;
+    width: 20px;
+}
+
+.column-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-list {
+    flex: 1; /* Takes up remaining column height */
+    overflow-y: auto; /* Enables scrolling only for task cards */
+}
+
+.add-task-icon {
+    position: relative;
+    left: 30%;
+    bottom: 4px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    
+}
+.add-task-icon:hover{
+    background-color: #e0e0e0;
+}
+
+/* Global styling for nav-text */
+.nav-text {
+    font-size: 14px; 
+    position: relative;
+    left: 30%; /* Adjust the font-size as per your design */
+}
+
+/* Optional: style for scrollbar */
+.board-columns::-webkit-scrollbar {
+    height: 8px; /* Adjust scrollbar height */
+}
+
+.board-columns::-webkit-scrollbar-thumb {
+    background: #aaa; /* Scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+.board-columns::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Track color */
+}
+.custom-dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-dropdown-trigger {
+   
+    cursor: pointer;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 13px;
+  }
+  
+  .custom-dropdown-arrow {
+    margin-left: 8px;
+  }
+  
+  .custom-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 10;
+  }
+  
+  .custom-dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .custom-dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .custom-dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+ .collaspe-icon:hover{
+    cursor: pointer;
+ }
+ /* For Webkit browsers */
+ .column::-webkit-scrollbar {
+    width: 16px; /* Increased width for thicker scrollbar */
+}
+
+.column::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    margin: 5px 0; /* Add some margin to the track */
+}
+
+.column::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 4px solid #f1f1f1; /* Add border to create padding effect */
+    background-clip: padding-box; /* Ensures the background doesn't show through the border */
+}
+
+.column::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border: 4px solid #f1f1f1;
+    background-clip: padding-box;
+}
+
+/* Task list container */
+.task-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Ensure board columns maintain horizontal scroll but don't show vertical scroll */
+.board-columns {
+    display: flex;
+    gap: 20px;
+    height: calc(99vh - 160px);
+    padding-bottom: 10px;
+    
+    overflow-x: auto; /* Maintain horizontal scroll for board */
+}
+
+/* Keep the thin scrollbar for the horizontal board scroll */
+/* Enable dragging cursor style for .board-columns */
+.board-columns {
+    cursor: grab;
+    overflow-x: auto; /* Ensure horizontal scrolling is allowed */
+    overflow-y: hidden; /* Hide vertical scroll */
+    display: flex;
+    gap: 20px;
+}
+.board-columns:active {
+    cursor: grabbing; /* Change cursor when actively dragging */
+}
+.no-tasks-card {
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for material design */
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .no-tasks-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+  }
+  
+  .no-tasks-card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .no-tasks-card p {
+    margin: 0;
+    color: #666; /* Soft grey text */
+  }
+  
+  /* Change color of the icon when the card is hovered */
+  .no-tasks-card:hover i {
+    color: #009688; /* Material teal on hover */
+  }
+  
+  /* Subtle fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .no-tasks-card {
+    animation: fadeIn 1s ease-out;
+  }
+  /* Thicker scrollbar for the horizontal board scroll */

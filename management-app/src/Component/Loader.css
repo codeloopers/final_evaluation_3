@@ -1,0 +1,23 @@
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+
+}
+
+.loader {
+    border: 8px solid #e0e0e0; /* Light gray border */
+    border-top: 8px solid #3498db; /* Blue top */
+    border-radius: 50%;
+    width: 60px; /* Loader size */
+    height: 60px; /* Loader size */
+    animation: spin 2s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

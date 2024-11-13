@@ -1,0 +1,345 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.modal-title span{
+    color: red;
+    align-items: center;
+    margin-left: 04px;
+}
+  .modal {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 550px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-title {
+    font-size: 14px;
+
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+  }
+  select{
+    appearance: none; /* Removes default styling in most browsers */
+  -webkit-appearance: none; /* Removes default styling in Safari */
+  -moz-appearance: none; /* Removes default styling in Firefox */
+    width: 85%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+
+    
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input[type="text"],
+  .input-group input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+  
+  .priority-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .priority-btn {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    font-size: 12px;
+  }
+  .priority-ellipse {
+    display: inline-block;
+    width: 08px;
+    height: 08px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .high {
+    background-color: #FF2473;
+  }
+  
+  .moderate {
+    background-color: #18B0FF;
+  }
+  
+  .low {
+    background-color: #63C05B;
+  }
+  
+  .selected {
+    font-weight: 500;
+  }
+  .priority-btn.selected {
+    background-color: #EEECEC;
+    color: black;
+  }
+  
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    margin-top: 10px 0;
+  }
+  .checklist-item input[type="text"] {
+    flex-grow: 1; /* Allow the input field to grow and take available space */
+    padding: 5px; /* Padding inside the input field */
+    border: 1px solid #ccc; /* Light border for the input field */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px; /* Space between input and delete button */
+    min-width: 150px; /* Minimum width for the input field */
+  }
+  .checklist-item span {
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin-right: 10px; /* Space between text and delete button */
+    width: 70%;
+  }
+  
+  /* Hide the default checkbox */
+.checklist-item input[type="checkbox"] {
+    appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  }
+  
+  /* Checkbox background when checked */
+  .checklist-item input[type="checkbox"]:checked {
+    background-color: #17A2B8;
+    border-color: #17A2B8;
+    color: white;
+  }
+  
+  /* Display check icon when checked */
+  .checklist-item input[type="checkbox"]:checked::before {
+    content: '✔';
+    font-size: 12px;
+    color: white !important; /* Ensure white color */
+    position: absolute;
+    text-align: center;
+  }
+  
+  .btn-delete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the delete icon to the far right */
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .add-new {
+    color: #767575;
+    cursor: pointer;
+    margin-top: 15px;  /* Add space above the 'Add New' button */
+    display: inline-block; 
+    font-weight: 500;
+  }
+  .input-group-checklist {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    min-height: 300px; /* Ensure space for at least 5 items */
+    display: flex;
+    flex-direction: column;
+    max-height: 30vh; /* Adjust as needed */
+    overflow-y: auto; /* Allow scrolling */
+    position: relative; /* Positioning context for children */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+  
+  .btn-cancel {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CF3636;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #CF3636;
+    font-size: 16px;
+    margin-left: 30px;
+  }
+  
+  .btn-save {
+    width: 100%;
+    padding: 10px;
+    background-color: #17A2B8;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .date-picker{
+    width: 130px;
+    height: 20px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 08px;
+    font-size: 16px;
+    text-align: center;
+  
+  }
+  /* Remove border and shadow for the date picker input */
+.date-picker {
+    border: 1px solid #E2E2E2;  /* Remove input border */
+    box-shadow: none; /* Remove any box shadow */
+    padding: 8px 12px;  /* Optional: adjust padding for a better look */
+    font-size: 14px;  /* Optional: adjust font size */
+    align-items: center;
+  }
+  
+  /* Remove the border and shadow from the calendar dropdown */
+  .react-datepicker__input-container input {
+    box-shadow: none; /* Remove box shadow */
+    align-items: center;
+  }
+  
+  .react-datepicker {
+    border: none;  /* Remove border around the calendar */
+    box-shadow: none;  /* Remove box shadow (elevation) */
+    align-items: center;
+  }
+  
+  /* Optional: Customize the calendar appearance */
+  .react-datepicker__header {
+    background-color: #fff;  /* Set background color */
+    border-bottom: none;  /* Remove bottom border */
+  }
+  
+  .react-datepicker__day--selected, 
+  .react-datepicker__day--keyboard-selected {
+    background-color: #007bff;  /* Customize selected day color */
+    color: white;  /* Set the text color for selected day */
+  }
+  
+  .custom-assign-dropdown{
+    width:85%;
+    padding: 2%;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 30px;
+
+  }
+  .dropdown-toggle{
+    width: 100%; /* Aligns dropdown button with input width */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 25px;
+  }
+  .dropdown-menu{
+    position: absolute;
+    top: 90%; /* Just below the toggle button */
+    left: 35px;
+    width: 95%; /* Same width as parent */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 2%;
+    border-radius: 8px;
+    z-index: 1000; /* Brings it above other elements */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+    overflow-x: auto;
+  height: 300px;
+  }
+  .assignee-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .assign-btn {
+    width: 80px;
+    padding: 4px;
+    background: white;
+    border: 1px solid #767575;
+    border-radius: 8px;
+    color: #767575;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto; /* Pushes button to the far right */
+  }
+
+  .assignee-initial-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #FFEBEB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  

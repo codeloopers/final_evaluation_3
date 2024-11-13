@@ -1,0 +1,29 @@
+/* ToastStyles.css */
+
+/* Custom styles for toast notifications */
+.Toastify__toast {
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the toast */
+    font-family: Arial, sans-serif; /* Font style */
+    font-size: 16px; /* Font size */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border: 1px solid #48C1B5;
+    width: 60%;
+    right: -100px;
+  }
+  
+
+  
+  .Toastify__toast--error {
+    background-color: tomato; /* Background color for error */
+    color: white; /* Text color for error */
+  }
+  
+  /* Adjust the position of the toast */
+  .Toastify__toast-container--top-right {
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+  }
+  
+
+  
